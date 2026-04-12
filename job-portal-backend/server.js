@@ -1,6 +1,7 @@
+require('dotenv').config();
 console.log("SERVER FILE RUNNING 🚀");
 
-require('dotenv').config();
+
 console.log("Mongo URI:", process.env.MONGO_URI);
 
 const express = require("express");
@@ -39,7 +40,7 @@ app.use((req, res) => {
 });
 
 /* ================= DB ================= */
-
+console.log("MONGO_URI:", process.env.MONGO_URI);
 mongoose.connect(process.env.MONGO_URI)
 .then(() => console.log("MongoDB connected ✅"))
 .catch(err => console.log(err));
