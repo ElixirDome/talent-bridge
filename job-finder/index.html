@@ -144,11 +144,21 @@
     <h2>Hiring Top Talent?</h2>
     <p>Post your vacancies on TalentBridge and connect with thousands of qualified professionals and interns. First job post is completely free.</p>
   </div>
+
   <div class="cta-btns">
-    <button class="cta-primary">Post a Job — Free</button>
+    <button class="cta-primary" onclick="goToPostJob()">
+      Post a Job — Free
+    </button>
+
     <button class="cta-ghost">Request a Demo</button>
   </div>
 </div>
+
+<script>
+function goToPostJob() {
+  window.location.href = "/post-job.html";
+}
+</script>
 
 <footer>
   <span>© 2026 TalentBridge Pvt. Ltd. All rights reserved.</span>

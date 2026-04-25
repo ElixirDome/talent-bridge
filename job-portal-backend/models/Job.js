@@ -12,8 +12,10 @@ const jobSchema = new mongoose.Schema({
   salary: String,
   period: String,
   loc: String,
-  date: String,
-  featured: Boolean
+
+  // 👇 ADD HERE
+  date: { type: String, default: () => new Date().toISOString() },
+  featured: { type: Boolean, default: false }
 });
 
 module.exports = mongoose.model("Job", jobSchema);
