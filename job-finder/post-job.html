@@ -83,7 +83,7 @@ document.getElementById("jobForm").addEventListener("submit", async (e) => {
     tags: ["new"]
   };
 
-  const res = await fetch("http://localhost:5001/api/jobs", {
+  const res = await fetch("/api/jobs", {
     method: "POST",
     headers: {
       "Content-Type": "application/json"
