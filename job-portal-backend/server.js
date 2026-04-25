@@ -31,7 +31,7 @@ app.use("/api/salaries", salaryRoutes);
 
 /* ================= FRONTEND AFTER ================= */
 
-// Serve static frontend
+// Serve static frontend// monolithic full-stack deployment
 app.use(express.static(path.join(__dirname, "../job-finder")));
 
 // Fallback to index.html (VERY IMPORTANT for SPA behavior)
@@ -47,7 +47,7 @@ mongoose.connect(process.env.MONGO_URI)
 
 /* ================= SERVER ================= */
 
-const PORT = 5001;
+const PORT = process.env.PORT || 5001;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
